@@ -12,12 +12,11 @@ filtered_list = []
 
 for element in number_list:
     filtered_command = ((COMMAND_EVEN == command and element % 2 == 0) or
-                     (COMMAND_ODD == command and element % 2 != 0) or
-                     (COMMAND_POSITIVE == command and element >= 0) or
-                     (COMMAND_NEGATIVE == command and element < 0))
+                        (COMMAND_ODD == command and element % 2 != 0) or
+                        (COMMAND_POSITIVE == command and element >= 0) or
+                        (COMMAND_NEGATIVE == command and element < 0))
 
     if filtered_command:
         filtered_list.append(element)
 
-# print(number_list)
 print(filtered_list)
