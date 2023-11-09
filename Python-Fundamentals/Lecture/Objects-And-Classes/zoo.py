@@ -15,20 +15,20 @@ class Zoo:
         elif spices == "bird":
             self.birds.append(name)
 
-        self.__animals += 1
+        Zoo.__animals += 1
 
     def get_info(self, spices):
-        result = []
+        result = ""
 
         if spices == 'mammal':
-            result = self.mammals
+            result += f"Mammals in {self.name_of_zoo}: {', '.join(self.mammals)}\n"
         elif spices == "fish":
-            result = self.fishes
+            result += f"Fishes in {self.name_of_zoo}: {', '.join(self.fishes)}\n"
         elif spices == "bird":
-            result = self.birds
+            result += f"Birds in {self.name_of_zoo}: {', '.join(self.birds)}\n"
 
-        return f"\n{spices.capitalize()}s in {self.name_of_zoo}: {', '.join(result)}\nTotal animals:" \
-               f" {self.__animals}"
+        result += f"Total animals: {Zoo.__animals}"
+        return result
 
 
 name = input()
