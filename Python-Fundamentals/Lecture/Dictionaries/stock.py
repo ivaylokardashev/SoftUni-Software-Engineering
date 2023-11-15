@@ -9,5 +9,6 @@ for product in products_to_search:
     if product in table_of_stock.keys():
         if table_of_stock[product] > 0:
             print(f"We have {table_of_stock[product]} of {product} left")
-    else:
-        print(f"Sorry, we don't have {product}")
+            continue
+
+    print(f"Sorry, we don't have {product}")
