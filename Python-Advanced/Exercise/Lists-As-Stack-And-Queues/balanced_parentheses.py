@@ -18,7 +18,7 @@ for index in range(len(parentheses)-1, -1, -1):
 
         if not match_flag:
             print('NO')
-            exit()
+            break
     else:
         stack.append(parentheses.pop())
 else:
